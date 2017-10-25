@@ -11,7 +11,7 @@ movielist <- c("the+social+network", "black+swan")
 results <- data.frame()
 
 for (i in 1:length(movielist)) {
-  url <- paste0("http://www.omdbapi.com/?apikey=d6a355c0&t=", movielist[i])
+  url <- paste0("http://www.omdbapi.com/?apikey=", apikey, "=", movielist[i])
   moviedata <- fromJSON(url)
   ID <- moviedata$imdbID
   results[i,1] <- movielist[i]
